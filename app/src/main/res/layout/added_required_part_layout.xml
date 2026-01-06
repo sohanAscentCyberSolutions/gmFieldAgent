@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/margin_small"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rounded_minus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductSerial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="#0909"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductName"
+            style="@style/M3_label_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Part Name 1"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mitsubushi"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductSerial" />
+
+
+
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/md_theme_surfaceDim"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            />
+
+
+
+        <CheckBox
+            android:id="@+id/isSupplerVisitRequired"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Supplier Visit Required"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewsupplierInfo"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_supplier_information"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:layout_constraintStart_toStartOf="@+id/isSupplerVisitRequired"
+            app:layout_constraintTop_toBottomOf="@id/isSupplerVisitRequired" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

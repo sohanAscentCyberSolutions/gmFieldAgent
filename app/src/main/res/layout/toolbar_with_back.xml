@@ -1,0 +1,38 @@
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:title="@string/app_name"
+        app:titleTextColor="@color/md_theme_light_onSurface"
+        android:textAlignment="viewStart"
+        app:navigationIcon="@drawable/ic_back"
+        >
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:layout_gravity="end"
+            app:chipStrokeWidth="0dp"
+            android:textColor="@color/md_theme_onPrimary"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/margin_medium"
+            app:chipCornerRadius="@dimen/corner_radius_large"
+            app:layout_constraintBottom_toBottomOf="@+id/commissioningTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/commissioningTitle"
+            tools:text="@string/open" />
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="16dp"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fab_margin">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commissioningTitle"
+            style="@style/m3_label_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/rounded_bg_breakdown"
+            android:backgroundTint="@null"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="4dp"
+            android:text="@string/breakdown"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:textColor="@color/md_theme_onPrimary"
+            app:chipCornerRadius="@dimen/corner_radius_large"
+            app:chipMinTouchTargetSize="26dp"
+            app:chipStrokeColor="@color/md_theme_light_onSurface"
+            app:chipStrokeWidth="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/commissioningTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/commissioningTitle"
+            app:layout_constraintTop_toTopOf="@+id/commissioningTitle"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="@string/open" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerNameTitle"
+            style="@style/m3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:maxLines="1"
+            android:text="Divyajot Industries"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/customerNameValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commissioningTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerNameValue"
+            style="@style/m3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Case ID 22342"
+            android:textAlignment="viewEnd"
+            android:textColor="#231918"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/customerNameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/customerNameTitle"
+            app:layout_constraintTop_toTopOf="@+id/customerNameTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productNameDateTitle"
+            style="@style/M3_label_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Product Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerNameTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productNameValue"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="45hrs 07mins"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/productNameDateTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/productNameDateTitle"
+            app:layout_constraintTop_toTopOf="@+id/productNameDateTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalJourneyTimeTitle"
+            style="@style/M3_label_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Supplier"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productNameDateTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalJourneyTimeValue"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3hr 45mins"
+            android:textAlignment="viewEnd"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/totalJourneyTimeTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/totalJourneyTimeTitle"
+            app:layout_constraintTop_toTopOf="@+id/totalJourneyTimeTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalVisitsTitle"
+            style="@style/M3_label_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Customer Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalJourneyTimeTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalVisitsValue"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/totalVisitsTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/totalVisitsTitle"
+            app:layout_constraintTop_toTopOf="@+id/totalVisitsTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerRatingTitle"
+            style="@style/M3_label_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Upcoming Visit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalVisitsTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerRatingValue"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/customerRatingTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/customerRatingTitle"
+            app:layout_constraintTop_toTopOf="@+id/customerRatingTitle" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/journeyStartedGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="btnStop,btnNavigate" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/journeyStartGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="btnStartJourney,btnViewCase" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStop"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_journey"
+            app:icon="@drawable/stop"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNavigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/md_theme_secondaryContainer"
+            android:text="@string/navigate"
+            android:textColor="@color/md_theme_onSecondaryContainer"
+            app:icon="@drawable/navigation"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="@+id/btnStop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerRatingTitle" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_visit"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartJourney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/md_theme_secondaryContainer"
+            android:text="@string/start_journey"
+            android:textColor="@color/md_theme_onSecondaryContainer"
+            app:icon="@drawable/ic_start"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="@+id/btnStop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerRatingTitle" />
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/md_theme_secondaryContainer"
+            android:textColor="@color/md_theme_onSecondaryContainer"
+            app:icon="@drawable/ic_start"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="@+id/btnStop"
+            app:layout_constraintEnd_toEndOf="@+id/btnStartJourney"
+            app:layout_constraintStart_toStartOf="@+id/btnStartJourney"
+            app:layout_constraintTop_toBottomOf="@+id/customerRatingTitle" />
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLargeViewCase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/go_to_visit"
+            android:visibility="gone"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnStartJourney"
+            app:layout_constraintTop_toBottomOf="@+id/customerRatingTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

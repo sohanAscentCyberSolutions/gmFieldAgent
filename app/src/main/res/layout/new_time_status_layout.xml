@@ -1,0 +1,110 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_theme_primaryContainer"
+    android:padding="@dimen/padding_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalWorkTimeTitle"
+        style="@style/m3_label_large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Total Work Time"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/totalWorkTimeValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalWorkTimeValue"
+        style="@style/m3_label_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4:50:32 Hours"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <include
+        android:id="@+id/startJourneyLayout"
+        layout="@layout/start_journey_layout"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle" />
+
+
+
+    <include
+        android:id="@+id/stopJourneyLayout"
+        layout="@layout/stop_journey_layout"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle" />
+
+
+
+
+
+    <include
+        android:id="@+id/startWorkLayout"
+        layout="@layout/start_work_layout"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle" />
+
+
+
+
+    <include
+        android:id="@+id/stopWorkLayout"
+        layout="@layout/stop_work_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle" />
+
+
+
+
+    <include
+        android:id="@+id/goCaseLayout"
+        layout="@layout/go_to_case_layout"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle" />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+

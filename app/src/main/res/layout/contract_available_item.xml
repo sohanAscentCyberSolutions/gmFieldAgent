@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/padding_small">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvIssueTitle"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:text="Contract Name"
+        android:textColor="@color/md_theme_light_onSurface"
+        android:textSize="@dimen/text_size_sami_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAMCPrice"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="AMC Price"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvAMCPriceValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIssueTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAMCPriceValue"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1999000"
+        android:textAlignment="textEnd"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAMCPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvAMCPrice" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDuration"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Started On"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvAMCPriceValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAMCPrice" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDurationValue"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="12 Months"
+        android:textAlignment="textEnd"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDuration" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOnSite"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Ending On"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvOnSiteValue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDuration" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOnSiteValue"
+        style="@style/M3_label_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOnSite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvOnSite"
+        app:layout_constraintTop_toTopOf="@+id/tvOnSite" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/onSiteService"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Onsite Service"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvAMCPriceValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnSite" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/onSiteServiceValue"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textAlignment="textEnd"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/onSiteService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/onSiteService"
+        app:layout_constraintTop_toTopOf="@+id/onSiteService" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/productAge"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Product Age"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvAMCPriceValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onSiteService" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/productAgeValue"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textAlignment="textEnd"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/productAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/productAge"
+        app:layout_constraintTop_toTopOf="@+id/productAge" />
+
+
+    <View
+        android:id="@+id/divider1"
+        style="@style/M3_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productAge" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

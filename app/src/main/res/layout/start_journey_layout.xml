@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartJourney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:onClick="onStartWorkClick"
+        android:text="@string/start_journey"
+        app:icon="@drawable/iv_bike"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:visibilityMode="ignore" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStarttReachedLocation"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:backgroundTint="@color/md_theme_onPrimary"
+        android:onClick="onStartWorkClick"
+        android:text="Reached Customer Location"
+        android:textColor="@color/md_theme_scrim"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartJourney"
+        app:visibilityMode="ignore" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

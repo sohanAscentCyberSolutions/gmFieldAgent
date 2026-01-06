@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePageFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.md3.view.home.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_viewNewCasesFragment"
+            app:destination="@id/viewNewCasesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_currentVisitFragment"
+            app:destination="@id/currentVisitFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewOpenCasesFragment"
+            app:destination="@id/viewOpenCasesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeBreakDownFragment"
+        android:name="com.example.md3.view.home.view.HomeFragmentBreakDown"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_breakdown">
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_viewOpenCasesBreakdownFragment"
+            app:destination="@id/viewOpenCasesBreakDownFragment" />
+        <action
+            android:id="@+id/action_homeBreakDownFragment_to_breakDownCurrentVisitFragment"
+            app:destination="@id/breakDownCurrentVisitFragment" />
+        <action
+            android:id="@+id/action_homeBreakDownFragment_to_viewNewCasesFragment"
+            app:destination="@id/viewNewCasesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewOpenCasesBreakDownFragment"
+        android:name="com.example.md3.view.breakdown.view.ViewOpenCasesBreakDownFragment"
+        android:label="fragment_view_cases"
+        tools:layout="@layout/fragment_view_cases">
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+        <argument
+            android:name="formatted_case_id"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_viewOpenCasesBreakDownFragment_to_conclusionFormFragment"
+            app:destination="@id/conclusionFormFragment" />
+        <action
+            android:id="@+id/action_viewOpenCasesBreakDownFragment_to_warrantyAndOtherDetailsFragment"
+            app:destination="@id/warrantyAndOtherDetailsFragment" />
+        <action
+            android:id="@+id/action_viewOpenCasesBreakDownFragment_to_createMRNFragment"
+            app:destination="@id/createMRNFragment" />
+        <action
+            android:id="@+id/action_viewOpenCasesBreakDownFragment_to_breakDownCurrentVisitFragment"
+            app:destination="@id/breakDownCurrentVisitFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewOpenCasesFragment"
+        android:name="com.example.md3.view.commissioning.view.ViewOpenCasesFragment"
+        android:label="fragment_view_cases"
+        tools:layout="@layout/fragment_view_cases">
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+        <argument
+            android:name="formatted_case_id"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_viewOpenCasesFragment_to_visitFormFragment"
+            app:destination="@id/visitFormFragment" />
+        <action
+            android:id="@+id/action_viewOpenCasesFragment_to_currentVisitFragment"
+            app:destination="@id/currentVisitFragment" />
+        <action
+            android:id="@+id/action_viewOpenCasesFragment_to_conclusionFormFragment"
+            app:destination="@id/conclusionFormFragment" />
+        <action
+            android:id="@+id/action_viewOpenCasesFragment_to_createMRNFragment"
+            app:destination="@id/createMRNFragment" />
+
+        <action
+            android:id="@+id/action_viewOpenCasesFragment_to_warrantyAndOtherDetailsFragment"
+            app:destination="@id/warrantyAndOtherDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/visitFormFragment"
+        android:name="com.example.md3.view.auth.view.VisitFormFragment"
+        android:label="VisitFormFragment">
+
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewNewCasesFragment"
+        android:name="com.example.md3.view.commissioning.view.ViewNewCasesFragment"
+        android:label="ViewNewCasesFragment">
+
+
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+
+        <argument
+            android:name="formatted_case_id"
+            app:argType="string" />
+
+
+        <action
+            android:id="@+id/action_viewNewCasesFragment_to_viewOpenCasesFragment"
+            app:destination="@id/viewOpenCasesFragment" />
+        <argument
+            android:name="comm_eng_id"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/currentVisitFragment"
+        android:name="com.example.md3.view.commissioning.view.CurrentVisitFragment"
+        android:label="fragment_current_visit"
+        tools:layout="@layout/fragment_current_visit">
+
+
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+
+        <argument
+            android:name="formatted_case_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_currentVisitFragment_to_visitFormFragment"
+            app:destination="@id/visitFormFragment" />
+        <action
+            android:id="@+id/action_currentVisitFragment_to_viewOpenCasesFragment"
+            app:destination="@id/viewOpenCasesFragment" />
+        <action
+            android:id="@+id/action_currentVisitFragment_to_submitCheckSheetFragment"
+            app:destination="@id/submitCheckSheetFragment" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_currentVisitFragment"
+        app:destination="@id/currentVisitFragment" />
+    <fragment
+        android:id="@+id/submitCheckSheetFragment"
+        android:name="ViewCheckSheetFragment"
+        android:label="SubmitCheckSheetFragment">
+        <argument
+            android:name="visit_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_submitCheckSheetFragment_to_checkSheetDetailsFragment"
+            app:destination="@id/checkSheetDetailsFragment" />
+        <action
+            android:id="@+id/action_submitCheckSheetFragment_to_checkSheetChipDetailsFragment"
+            app:destination="@id/checkSheetChipDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkSheetDetailsFragment"
+        android:name="com.example.md3.view.checksheet.view.CheckSheetDetailsFragment"
+        android:label="fragment_check_sheet_details"
+        tools:layout="@layout/fragment_check_sheet_details">
+
+        <argument
+            android:name="action_type"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkSheetChipDetailsFragment"
+        android:name="com.example.md3.view.checksheet.view.CheckSheetChipDetailsFragment"
+        android:label="CheckSheetChipDetailsFragment">
+
+
+        <argument
+            android:name="action_type"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.md3.view.home.view.HomeDashBoardFragment"
+        android:label="HomePageFragment">
+        <action
+            android:id="@+id/action_homePageFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homePageBreakdownFragment_to_homeFragment"
+            app:destination="@id/homeBreakDownFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conclusionFormFragment"
+        android:name="com.example.md3.view.commissioning.view.ConclusionFormFragment"
+        android:label="ConclusionFormFragment">
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/warrantyAndOtherDetailsFragment"
+        android:name="com.example.md3.view.breakdown.view.WarrantyAndOtherDetailsFragment"
+        android:label="WarrantyAndOtherDetailsFragment">
+
+        <argument
+            android:name="is_from_breakdown"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_warrantyAndOtherDetailsFragment_to_extendedAndAMCDetailsFragment"
+            app:destination="@id/extendedAndAMCDetailsFragment" />
+        <action
+            android:id="@+id/action_warrantyAndOtherDetailsFragment_to_warrantyDetailsFragment"
+            app:destination="@id/warrantyDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/extendedAndAMCDetailsFragment"
+        android:name="com.example.md3.view.breakdown.view.ExtendedAndAMCDetailsFragment"
+        android:label="fragment_extended_and_a_m_c_details"
+        tools:layout="@layout/fragment_extended_and_a_m_c_details">
+
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+
+        <argument
+            android:name="isAmcType"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/warrantyDetailsFragment"
+        android:name="com.example.md3.view.breakdown.view.WarrantyDetailsFragment"
+        android:label="fragment_warranty_details"
+        tools:layout="@layout/fragment_warranty_details">
+
+
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/breakDownCurrentVisitFragment"
+        android:name="com.example.md3.view.breakdown.view.BreakDownCurrentVisitFragment"
+        android:label="BreakDownCurrentVisitFragment">
+
+
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+
+        <argument
+            android:name="formatted_case_id"
+            app:argType="string" />
+
+
+        <action
+            android:id="@+id/action_breakDownCurrentVisitFragment_to_viewOpenCasesBreakDownFragment"
+            app:destination="@id/viewOpenCasesBreakDownFragment" />
+
+
+        <action
+            android:id="@+id/action_breakdown_currentVisitFragment_to_visitFormFragment"
+            app:destination="@id/visitFormFragment" />
+        <action
+            android:id="@+id/action_breakdown_currentVisitFragment_to_viewOpenCasesFragment"
+            app:destination="@id/viewOpenCasesFragment" />
+        <action
+            android:id="@+id/action_breakdown_currentVisitFragment_to_submitCheckSheetFragment"
+            app:destination="@id/submitCheckSheetFragment" />
+        <action
+            android:id="@+id/action_breakDownCurrentVisitFragment_to_visitInputFormBreakdownFragment"
+            app:destination="@id/visitInputFormBreakdownFragment" />
+
+        <action
+            android:id="@+id/action_breakDownCurrentVisitFragment_to_submitCheckSheetFragment"
+            app:destination="@id/submitCheckSheetFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/createMRNFragment"
+        android:name="com.example.md3.view.breakdown.view.CreateMRNFragment"
+        android:label="fragment_create_m_r_n"
+        tools:layout="@layout/fragment_create_m_r_n">
+        <action
+            android:id="@+id/action_createMRNFragment_to_selectedMRNFragment"
+            app:destination="@id/selectedMRNFragment" />
+        <argument
+            android:name="is_from_breakdown"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedMRNFragment"
+        android:name="SelectedMRNFragment"
+        android:label="SelectedMRNFragment">
+        <argument
+            android:name="is_from_breakdown"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/visitInputFormBreakdownFragment"
+        android:name="com.example.md3.view.breakdown.view.VisitInputFormBreakdownFragment"
+        android:label="VisitInputFormBreakdownFragment">
+
+
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+
+        <action
+            android:id="@+id/action_visitInputFormBreakdownFragment_to_addSuppilerInfoFragment"
+            app:destination="@id/addSuppilerInfoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addSuppilerInfoFragment"
+        android:name="com.example.md3.view.breakdown.view.PartsFragment"
+        android:label="AddSuppilerInfoFragment">
+
+        <argument
+            android:name="case_id"
+            app:argType="string" />
+
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_visitInputFormBreakdownFragment"
+        app:destination="@id/visitInputFormBreakdownFragment" />
+    <fragment
+        android:id="@+id/claimPartFragment"
+        android:name="com.example.md3.view.breakdown.view.ClaimPartFragment"
+        android:label="fragment_claim_part"
+        tools:layout="@layout/fragment_claim_part">
+
+        <argument
+            android:name="is_from_breakdown"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_claimPartFragment"
+        app:destination="@id/claimPartFragment" />
+    <fragment
+        android:id="@+id/rootAnalysisFragment"
+        android:name="com.example.md3.view.commissioning.view.RootAnalysisFragment"
+        android:label="RootAnalysisFragment" />
+    <action
+        android:id="@+id/action_global_rootAnalysisFragment"
+        app:destination="@id/rootAnalysisFragment" />
+    <fragment
+        android:id="@+id/failureReasonFragment"
+        android:name="com.example.md3.view.commissioning.view.FailureReasonFragment"
+        android:label="FailureReasonFragment" />
+    <action
+        android:id="@+id/action_global_failureReasonFragment"
+        app:destination="@id/failureReasonFragment" />
+    <fragment
+        android:id="@+id/claimPartListFragment"
+        android:name="com.example.md3.view.breakdown.view.ClaimPartListFragment"
+        android:label="ClaimPartListFragment">
+
+
+        <argument
+            android:name="is_from_breakdown"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+
+        <argument
+            android:name="service_request_id"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_claimPartListFragment"
+        app:destination="@id/claimPartListFragment" />
+    <fragment
+        android:id="@+id/calendarViewFragment"
+        android:name="com.example.md3.view.home.view.CalendarViewFragment"
+        android:label="fragment_calendar_view"
+        tools:layout="@layout/fragment_calendar_view" />
+    <action
+        android:id="@+id/action_global_calendarViewFragment"
+        app:destination="@id/calendarViewFragment" />
+    <action
+        android:id="@+id/action_global_viewOpenCasesBreakDownFragment"
+        app:destination="@id/viewOpenCasesBreakDownFragment" />
+    <action
+        android:id="@+id/action_global_viewOpenCasesFragment"
+        app:destination="@id/viewOpenCasesFragment" /><action android:id="@+id/action_global_viewNewCasesFragment" app:destination="@id/viewNewCasesFragment"/><action android:id="@+id/action_global_breakDownCurrentVisitFragment" app:destination="@id/breakDownCurrentVisitFragment"/>
+    <fragment
+        android:id="@+id/polylineMapFragment"
+        android:name="com.example.md3.utils.Maps.PolylineMapFragment"
+        android:label="PolylineMapFragment" /><action android:id="@+id/action_global_polylineMapFragment" app:destination="@id/polylineMapFragment"/><action android:id="@+id/action_global_currentVisitFragment2" app:destination="@id/currentVisitFragment"/>
+
+
+
+    <include app:graph="@navigation/customers_nav" />
+
+
+</navigation>

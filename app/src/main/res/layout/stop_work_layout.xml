@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStop"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:backgroundTint="@color/md_theme_surfaceContainer_highContrast"
+        android:text="@string/stop_work"
+        app:icon="@drawable/stop"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/btnObservation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:visibilityMode="ignore" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnObservation"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/record_observation"
+        app:constraint_referenced_ids="btnStop,btnSubmitCheckSheet"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnterVisitInput"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubmitCheckSheet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnStop"
+        app:visibilityMode="ignore" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitCheckSheet"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Submit CheckSheet"
+        app:constraint_referenced_ids="btnStop,btnObservation"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnterVisitInput"
+        app:layout_constraintEnd_toEndOf="@+id/btnStop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnObservation"
+        app:visibilityMode="ignore" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnterVisitInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_visit_input"
+        app:constraint_referenced_ids="btnStop,btnObservation,btnSubmitCheckSheet"
+        app:icon="@drawable/ic_start"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:visibilityMode="ignore" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

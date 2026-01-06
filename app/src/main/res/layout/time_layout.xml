@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_medium">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalTimetitle"
+        style="@style/M3_label_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:gravity="center"
+        android:text="Total Time Spend"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotaljourneyTimeTitle"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:text="Total Journey Time"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalTimetitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalTimetitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotaljourneyValue"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvTotaljourneyTimeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotaljourneyTimeTitle"
+        tools:text="40 mins" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalWorkTimeTitle"
+        style="@style/M3_body_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Total Work Time"
+        app:layout_constraintStart_toStartOf="@+id/tvTotaljourneyValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotaljourneyValue" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalWorkTimeValue"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalWorkTimeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalWorkTimeTitle"
+        tools:text="40 mins" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

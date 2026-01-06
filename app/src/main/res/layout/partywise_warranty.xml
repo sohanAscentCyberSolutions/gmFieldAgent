@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        >
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvIssueTitle"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Extended Warranty"
+            app:layout_constraintEnd_toStartOf="@+id/tvViewDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Warranty"
+            android:checked="true"
+            android:textColor="@color/colorOnSuccessContainer"
+            app:chipBackgroundColor="@color/colorSuccessContainer"
+            app:layout_constraintStart_toStartOf="@+id/tvIssueTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvIssueTitle" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWarrantyStartDate"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Ending On 12/04/2024"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvWarrantyStartDateValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWarrantyStartDateValue"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="16 August 2024"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWarrantyStartDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvWarrantyStartDate" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWarrantyEndDate"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Warranty End Date"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvWarrantyEndDateValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWarrantyStartDate" />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWarrantyEndDateValue"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="16 August 2024"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWarrantyEndDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvWarrantyEndDate" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvViewDetails"
+            style="@style/M3_label_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIssueTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvIssueTitle"
+            tools:text="#852342" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
+

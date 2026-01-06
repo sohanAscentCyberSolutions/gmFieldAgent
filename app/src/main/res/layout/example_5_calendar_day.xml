@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exFiveDayLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:id="@+id/exFiveDayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:text="1"
+        android:textFontWeight="400"
+        android:textColor="#252525"
+        android:textSize="10sp"
+        tools:text="24"
+        tool:layout_constraintTop_toTopOf="parent"
+        tool:layout_constraintStart_toStartOf="parent"
+        tool:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tool:layout_constraintStart_toStartOf="parent"
+        tool:layout_constraintEnd_toEndOf="parent"
+        tool:layout_constraintTop_toBottomOf="@id/exFiveDayText"
+        >
+
+        <View
+            android:id="@+id/breakDownView"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="#FEE6C9"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+        <View
+            android:id="@+id/commissionView"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="#D2F0FF"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="#FFD9D9"
+            tools:visibility="visible"
+            />
+
+
+    </LinearLayout>
+
+
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="1dp"-->
+<!--        android:background="@color/md_theme_onPrimary">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/exFiveDayText"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:padding="@dimen/padding_medium"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginEnd="4dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="1"-->
+<!--            android:textFontWeight="400"-->
+<!--            android:textColor="#252525"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:text="24" />-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            >-->
+
+<!--        <View-->
+<!--            android:id="@+id/breakDownView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="4dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:background="@drawable/rounded_bg"-->
+<!--            android:backgroundTint="#FEE6C9"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible"-->
+<!--            />-->
+
+<!--        <View-->
+<!--            android:id="@+id/commissionView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="5dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:background="@drawable/rounded_bg"-->
+<!--            android:backgroundTint="#D2F0FF"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible"-->
+<!--            />-->
+
+
+<!--        <View-->
+<!--            android:id="@+id/view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="5dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:background="@drawable/rounded_bg"-->
+<!--            android:backgroundTint="#FFD9D9"-->
+<!--            tools:visibility="visible"-->
+<!--            />-->
+
+
+<!--        </LinearLayout>-->
+
+<!--    </FrameLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

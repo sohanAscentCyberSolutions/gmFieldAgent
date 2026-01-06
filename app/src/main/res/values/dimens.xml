@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_margin">16dp</dimen>
+
+
+
+
+
+
+    <!-- Text size dimens -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_sami_medium">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+
+
+    <!-- Padding dimens -->
+
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="padding_12dp">12dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_extra_large">48dp</dimen>
+
+    <!-- Margin dimens -->
+
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">40dp</dimen>
+
+
+    <!-- Corner radius dimens -->
+    <dimen name="corner_radius_small">4dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_large">12dp</dimen>
+
+
+
+    <dimen name="icon_width">28dp</dimen>
+
+    <!-- Height dimens -->
+    <dimen name="height_text_input_field">56dp</dimen>
+    <dimen name="height_button_medium">40dp</dimen>
+    <dimen name="rating_bar_height">32dp</dimen>
+    <dimen name="rating_bar_star_size">32dp</dimen>
+    <dimen name="rating_signature_pad">120dp</dimen>
+
+
+
+</resources>

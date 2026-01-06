@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_medium">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="26dp"
+        android:layout_height="27dp"
+        android:src="@drawable/blinds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvcomType"
+        style="@style/m3_label_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:background="@drawable/trans_bg"
+        android:paddingHorizontal="@dimen/padding_small"
+        android:paddingVertical="@dimen/padding_extra_small"
+        android:text="@string/commissioning"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvcomStndType"
+        style="@style/m3_label_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:visibility="gone"
+        android:background="@drawable/trans_bg"
+        android:paddingHorizontal="@dimen/padding_small"
+        android:paddingVertical="@dimen/padding_extra_small"
+        android:text="Standard"
+        app:layout_constraintBottom_toBottomOf="@+id/tvcomType"
+        app:layout_constraintStart_toEndOf="@+id/tvcomType"
+        app:layout_constraintTop_toTopOf="@+id/tvcomType" />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/tvStatus"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        app:chipStrokeWidth="1dp"
+        app:chipStrokeColor="@color/md_theme_light_onSurface"
+        app:chipMinTouchTargetSize="26dp"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/md_theme_onPrimary"
+        app:chipCornerRadius="@dimen/corner_radius_large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvcomStndType"
+        app:layout_constraintStart_toEndOf="@+id/tvcomStndType"
+        app:layout_constraintTop_toTopOf="@+id/tvcomStndType"
+        tools:text="@string/open" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvIssuetitle"
+        style="@style/m3_label_medium.bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintStart_toStartOf="@+id/tvcomType"
+        app:layout_constraintTop_toBottomOf="@+id/tvcomType"
+        android:text="Description : " />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvIssue"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvIssuetitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvcomType"
+        tools:text="Issue with the machine damage" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPlannedDateTitle"
+        style="@style/m3_label_medium.bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="@+id/tvIssuetitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvIssue"
+        android:text="Planned Date : " />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPlannedDate"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPlannedDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvIssue"
+        tools:text="Planned Date: 18 December 2023" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConcludeCase"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:padding="@dimen/padding_small"
+        android:visibility="gone"
+        android:text="@string/conclude_case"
+        android:textColor="@color/md_theme_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvcomType"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlannedDate"
+        app:strokeColor="@color/md_theme_error" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

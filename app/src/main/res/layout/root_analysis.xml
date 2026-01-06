@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_with_cross" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/why1"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:hint="@string/why1"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/why_one"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="@string/enter_root_analysis"
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:imeOptions="actionNext"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/why2"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:hint="@string/why2"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+        app:layout_constraintTop_toBottomOf="@id/why1"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/why_two"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="@string/enter_root_analysis"
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:imeOptions="actionNext"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/why3"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:hint="@string/why3"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+        app:layout_constraintTop_toBottomOf="@id/why2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/whyThree"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="@string/enter_root_analysis"
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:imeOptions="actionNext"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <include
+        android:id="@+id/btnLayout"
+        layout="@layout/button_with_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

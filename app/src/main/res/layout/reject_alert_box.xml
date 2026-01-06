@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/corner_radius_large"
+    android:backgroundTint="#FFFFFF"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/ic_reject"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            style="@style/M3_heading_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:text="@string/provide_reason_to_reject"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilInput"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/reason"
+            app:hintAnimationEnabled="false"
+            app:expandedHintEnabled="false"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+            app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+            app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+            app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInput"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:hint="@string/input_reason_here"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                android:inputType="text"
+                android:padding="@dimen/padding_medium" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <View
+            android:id="@+id/dummyView3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/md_theme_outlineVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilInput" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_and_reject"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dummyView3" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCancel"
+            style="@style/M3_title_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@null"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPositive"
+            app:layout_constraintEnd_toStartOf="@+id/btnPositive"
+            app:layout_constraintTop_toTopOf="@+id/btnPositive" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

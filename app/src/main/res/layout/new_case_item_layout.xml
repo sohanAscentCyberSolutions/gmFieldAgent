@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginBottom="16dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fab_margin"
+        >
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imvCircularWithStroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:src="@drawable/commissioninglogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvComTitle"
+            style="@style/M3_title_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/commissioning"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintStart_toEndOf="@+id/imvCircularWithStroke"
+            app:layout_constraintTop_toTopOf="@+id/imvCircularWithStroke" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvComCaseNo"
+            style="@style/M3_body_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Case ID 22342919283"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintStart_toEndOf="@+id/imvCircularWithStroke"
+            app:layout_constraintTop_toBottomOf="@+id/tvComTitle" />
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_option"
+            app:layout_constraintBottom_toBottomOf="@+id/tvComCaseNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvComTitle" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/callPlanDateTitle"
+            style="@style/m3_label_large.md_theme_dark_background"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call Plan Date"
+            app:layout_constraintStart_toStartOf="@+id/imvCircularWithStroke"
+            app:layout_constraintTop_toBottomOf="@+id/imvCircularWithStroke" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/callPlanDateValue"
+            style="@style/m3_label_large.md_theme_dark_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20 June 2023"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/callPlanDateTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/callPlanDateTitle"
+            app:layout_constraintTop_toTopOf="@+id/callPlanDateTitle" />
+
+
+        <View
+            android:id="@+id/dummyView1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/md_theme_outlineVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/callPlanDateTitle" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/supplerTitle"
+            style="@style/m3_label_large.md_theme_dark_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:text="Supplier"
+            app:layout_constraintStart_toStartOf="@+id/imvCircularWithStroke"
+            app:layout_constraintTop_toBottomOf="@+id/dummyView1" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/supplervalue"
+            style="@style/m3_label_large.md_theme_dark_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ace Designers"
+            android:visibility="gone"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/supplerTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/supplerTitle"
+            app:layout_constraintTop_toTopOf="@+id/supplerTitle" />
+
+
+        <View
+            android:id="@+id/dummyView2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            android:background="@color/md_theme_outlineVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supplerTitle" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customNameTitle"
+            style="@style/m3_label_large.md_theme_dark_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Customer Name"
+            app:layout_constraintStart_toStartOf="@+id/imvCircularWithStroke"
+            app:layout_constraintTop_toBottomOf="@+id/dummyView2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customNameValue"
+            style="@style/m3_label_large.md_theme_dark_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Divyajot Industries"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/customNameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/customNameTitle"
+            app:layout_constraintTop_toTopOf="@+id/customNameTitle" />
+
+
+        <View
+            android:id="@+id/dummyView3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/md_theme_outlineVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customNameTitle" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/accept"
+            android:backgroundTint="@color/colorSuccess"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dummyView3" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="@color/md_theme_light_onSurface"
+            app:chipMinTouchTargetSize="26dp"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:textColor="@color/md_theme_onPrimary"
+            app:chipCornerRadius="@dimen/corner_radius_large"
+            app:layout_constraintBottom_toBottomOf="@+id/tvComCaseNo"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/tvComTitle"
+            tools:text="@string/open" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReject"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reject"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAccept"
+            app:layout_constraintEnd_toStartOf="@+id/btnAccept"
+            app:layout_constraintTop_toTopOf="@+id/btnAccept" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+

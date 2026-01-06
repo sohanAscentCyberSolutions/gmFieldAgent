@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/auth_nav"
+    app:startDestination="@id/loginFragment">
+
+
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+    <action
+        android:id="@+id/action_global_loginWithOtpFragment"
+        app:destination="@id/loginWithOtpFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.md3.view.auth.view.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/loginWithOtpFragment"
+        android:name="com.example.md3.view.auth.view.LoginWithOtpFragment"
+        android:label="LoginWithOtpFragment" />
+
+</navigation>

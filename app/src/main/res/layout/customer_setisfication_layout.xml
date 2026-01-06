@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRequestSetisCode"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:text="@string/request_setisfication_code"
+        app:icon="@drawable/ic_message"
+        app:iconGravity="textStart"
+        android:textSize="@dimen/text_size_sami_medium"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:visibilityMode="ignore" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSetisficationCode"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestSetisCode"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/setisfication_code"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSetisficationCode"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="@string/setisfication_code_placeholder"
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbCodeNotProvided"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/code_not_provide"
+        android:checked="false"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/tilSetisficationCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reasonLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:hint="Select Reason"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbCodeNotProvided">
+
+        <AutoCompleteTextView
+            android:id="@+id/codeNotProvidedReason"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="false"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/padding_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="16dp"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fab_margin">
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commissioningTitle2"
+            style="@style/M3_title_medium"
+            android:layout_width="0dp"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingVertical="@dimen/padding_extra_small"
+            android:visibility="gone"
+            android:background="@drawable/capsule_shape_bg"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/breakdown" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/caseIdValue"
+            style="@style/M3_body_medium"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="@dimen/padding_extra_small"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:background="@drawable/capsule_shape_right_bg"
+            android:layout_height="wrap_content"
+            android:text="Case Closed"
+            app:layout_constraintBottom_toBottomOf="@+id/commissioningTitle2"
+            app:layout_constraintStart_toEndOf="@+id/commissioningTitle2"
+            app:layout_constraintTop_toTopOf="@+id/commissioningTitle2" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_medium"
+            app:chipCornerRadius="@dimen/corner_radius_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorOnSuccessContainer"
+            app:chipBackgroundColor="@color/colorSuccessContainer"
+            tools:text="@string/closed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerNameTitle"
+            style="@style/m3_label_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divyajot Industries"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerNameValue"
+            style="@style/m3_label_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Case ID 22342"
+            android:textAlignment="viewEnd"
+            android:textColor="#231918"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/customerNameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/customerNameTitle"
+            app:layout_constraintTop_toTopOf="@+id/customerNameTitle" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customerNameTitle" />
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

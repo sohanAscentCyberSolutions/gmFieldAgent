@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/padding_small"
+    >
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOnSite"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Onsite Service"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvOnSiteValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOnSiteValue"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textAlignment="textEnd"
+        android:textColor="@color/md_theme_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOnSite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvOnSite" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

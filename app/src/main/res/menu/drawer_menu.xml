@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/customers_nav"
+            android:title="  Customers"
+            android:checkable="true" />
+
+
+        <item
+            android:id="@+id/demo1"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo2"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo3"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo4"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo5"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo6"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo7"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo8"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/demo9"
+            android:title="  "
+            android:checkable="false" />
+
+
+        <item
+            android:id="@+id/signOut"
+            android:iconTint="#BA1A1A"
+            android:title="Sign Out"
+            android:checkable="true" />
+
+
+
+
+    </group>
+
+</menu>

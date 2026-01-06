@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="@dimen/padding_large"
+    >
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitNumber"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Visit #4"
+        app:layout_constraintEnd_toStartOf="@+id/tvViewDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvname"
+        style="@style/M3_label_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/trans_bg"
+        android:drawableStart="@drawable/ic_user_img"
+        android:drawablePadding="@dimen/padding_small"
+        android:padding="4dp"
+        android:text="Ankush "
+        app:layout_constraintStart_toStartOf="@+id/tvVisitNumber"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitNumber" />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:paddingHorizontal="@dimen/padding_small"
+        android:textColor="@color/md_theme_onPrimary"
+        android:textSize="6dp"
+        app:chipCornerRadius="@dimen/corner_radius_large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvname"
+        app:layout_constraintStart_toEndOf="@+id/tvname"
+        app:layout_constraintTop_toTopOf="@+id/tvname"
+        tools:text="@string/open" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitSummeryTitle"
+        style="@style/M3_body_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Visit Summary"
+        app:layout_constraintEnd_toStartOf="@+id/tvViewDetails"
+        app:layout_constraintStart_toStartOf="@+id/tvname"
+        app:layout_constraintTop_toBottomOf="@+id/tvname" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitSummeryValue"
+        style="@style/M3_body_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="This is just demo summery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvVisitSummeryTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitSummeryTitle" />
+
+
+
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvViewDetails"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_medium"
+        android:text="View Details"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCall"
+        app:layout_constraintEnd_toStartOf="@+id/ivCall"
+        app:layout_constraintTop_toTopOf="@+id/ivCall" />
+
+    <ImageView
+        android:id="@+id/ivCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rounded_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitSummeryValue" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

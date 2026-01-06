@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_with_back" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/partName"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Part Name"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_marginEnd="20dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCustomerPhone"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="@string/enter_batch_number"
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:enabled="false"
+            android:text="Part Name One"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/problemDescription"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:hint="Problem Description"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+        app:layout_constraintTop_toBottomOf="@id/partName"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="Enter Description Here..."
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddPhoto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:text="Add Photo"
+        app:icon="@drawable/ic_galary"
+        app:iconGravity="textStart"
+        android:textSize="@dimen/text_size_sami_medium"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/problemDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:visibilityMode="ignore"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addDocument"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:text="Add Document"
+        app:icon="@drawable/ic_file"
+        app:iconGravity="textStart"
+        android:textSize="@dimen/text_size_sami_medium"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/btnAddPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:visibilityMode="ignore"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHeading"
+        style="@style/M3_label_medium1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="Email Notifications"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDocument" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInput"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Email"
+        app:hintAnimationEnabled="false"
+        app:expandedHintEnabled="false"
+        android:layout_marginEnd="20dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEdittext"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:hint="@string/enter_batch_number"
+            android:gravity="top"
+            android:height="@dimen/height_text_input_field"
+            android:enabled="false"
+            android:text="Enter Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:padding="@dimen/padding_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addCCEmail"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:text="Add CC Email"
+        app:icon="@drawable/ic_email"
+        app:iconGravity="textStart"
+        android:textSize="@dimen/text_size_sami_medium"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:visibilityMode="ignore"/>
+
+    <include
+        android:id="@+id/btnLayout"
+        layout="@layout/button_with_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

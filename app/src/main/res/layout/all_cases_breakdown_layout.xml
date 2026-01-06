@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="16dp"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fab_margin">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commissioningTitle2"
+            style="@style/M3_title_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/capsule_shape_bg"
+            android:padding="@dimen/padding_extra_small"
+            android:text="@string/breakdown"
+            android:textColor="@color/md_theme_onPrimary"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/caseIdValue"
+            style="@style/M3_body_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/capsule_shape_right_bg"
+            android:padding="@dimen/padding_extra_small"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="@dimen/padding_extra_small"
+            android:text="Case Closed"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/commissioningTitle2"
+            app:layout_constraintStart_toEndOf="@+id/commissioningTitle2"
+            app:layout_constraintTop_toTopOf="@+id/commissioningTitle2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commissioningTitle"
+            style="@style/m3_label_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/rounded_bg_breakdown"
+            android:backgroundTint="@null"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="4dp"
+            android:text="@string/breakdown"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:textColor="@color/md_theme_onPrimary"
+            app:chipCornerRadius="@dimen/corner_radius_large"
+            app:layout_constraintBottom_toBottomOf="@+id/commissioningTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/commissioningTitle"
+            app:layout_constraintTop_toTopOf="@+id/commissioningTitle"
+            tools:text="@string/open" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerNameTitle"
+            style="@style/m3_label_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Divyajot Industries"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/customerNameValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commissioningTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/customerNameValue"
+            style="@style/m3_label_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Case ID 22342"
+            android:textAlignment="viewEnd"
+            android:textColor="#231918"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/customerNameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/customerNameTitle"
+            app:layout_constraintTop_toTopOf="@+id/customerNameTitle" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customerNameTitle" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/journeyStartedGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="btnStop,btnNavigate" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_create_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="btnCreateVisit,btnViewCase" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStop"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_journey"
+            app:icon="@drawable/stop"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNavigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/md_theme_secondaryContainer"
+            android:text="@string/navigate"
+            android:textColor="@color/md_theme_onSecondaryContainer"
+            app:icon="@drawable/navigation"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="@+id/btnStop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_case"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateVisit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/md_theme_secondaryContainer"
+            android:text="Create Visit"
+            android:textColor="@color/md_theme_onSecondaryContainer"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="@+id/btnStop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLargeViewCase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/view_case"
+            android:visibility="gone"
+            app:iconTint="@color/md_theme_scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

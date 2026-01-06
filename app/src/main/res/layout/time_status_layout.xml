@@ -1,0 +1,153 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_theme_primaryContainer"
+    android:padding="@dimen/padding_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalWorkTimeTitle"
+        style="@style/m3_label_large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Total Work Time"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/totalWorkTimeValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalWorkTimeValue"
+        style="@style/m3_label_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4:50:32 Hours"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStop"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_surfaceContainer_highContrast"
+        android:text="@string/stop_work"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:constraint_referenced_ids="btnObservation,btnSubmitCheckSheet"
+        app:icon="@drawable/stop"
+        app:iconGravity="textStart"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle"
+        app:visibilityMode="ignore" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnObservation"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:visibility="gone"
+        android:text="@string/record_observation"
+        app:constraint_referenced_ids="btnStop,btnSubmitCheckSheet"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubmitCheckSheet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnStop"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop"
+        app:visibilityMode="ignore" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitCheckSheet"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:visibility="gone"
+        android:text="Submit CheckSheet"
+        app:constraint_referenced_ids="btnStop,btnObservation"
+        app:layout_constraintEnd_toEndOf="@+id/btnStop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnObservation"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop"
+        app:visibilityMode="ignore" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStopJourney"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/stop_journey"
+        app:icon="@drawable/stop"
+        app:iconTint="@color/md_theme_scrim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkTimeTitle" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartJourney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:onClick="onStartWorkClick"
+        android:text="@string/start_journey"
+        app:constraint_referenced_ids="btnStopJourney"
+        app:icon="@drawable/iv_bike"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnObservation"
+        app:visibilityMode="ignore" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartWork"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onStartWorkClick"
+        android:text="Start Work"
+        app:constraint_referenced_ids="btnStop,btnObservation,btnSubmitCheckSheet"
+        app:icon="@drawable/ic_start"
+        app:iconGravity="textStart"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartJourney"
+        app:visibilityMode="ignore" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToCase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Case"
+        android:visibility="gone"
+        app:icon="@drawable/ic_start"
+        app:iconGravity="textStart"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartJourney"
+        app:visibilityMode="ignore" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+

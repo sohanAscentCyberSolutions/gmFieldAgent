@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="@dimen/padding_small"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipOutWarranty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/out_of_warranty"
+        android:visibility="invisible"
+        android:textSize="@dimen/text_size_small"
+        app:chipStrokeWidth="0dp"
+        app:chipBackgroundColor="@color/md_theme_errorContainer"
+        app:chipIcon="@drawable/cross_circle_rounded"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipInWarranty"
+        style="@style/Widget.Material3.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textSize="@dimen/text_size_small"
+        android:text="@string/in_warranty"
+        app:chipStrokeWidth="0dp"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorOnSuccessContainer"
+        app:chipBackgroundColor="@color/colorSuccessContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/identificationNumber"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:textSize="@dimen/text_size_small"
+        android:text="#2322317798878"
+        android:textColor="@color/md_theme_onSurface"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipInWarranty" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/partName"
+        style="@style/M3_body_large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="Part Name 1 "
+        android:textColor="@color/md_theme_onSurface"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/quantityCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/identificationNumber" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/partDescription"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="This is description of the selected part, auto-shown."
+        android:paddingTop="5dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/md_theme_onSurface"
+        app:layout_constraintEnd_toStartOf="@+id/quantityCard"
+        app:layout_constraintTop_toBottomOf="@id/partName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quantityCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/partDescription"
+        app:layout_constraintTop_toTopOf="@+id/partName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:paddingVertical="@dimen/padding_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <TextView
+                android:id="@+id/tvQuantityHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="Qty :"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="0"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quantityCardWithMinusPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/partName">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="@dimen/padding_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/btnMinus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/minus" />
+
+            <TextView
+                android:id="@+id/tvQuantityWithMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/btnPlus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/small_plus" />
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/partDescription"
+        tools:itemCount="2"
+        tools:listitem="@layout/edittext_add_quantity_item" />
+
+    <include
+        android:id="@+id/addAnotherBatchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        layout="@layout/add_another_batch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

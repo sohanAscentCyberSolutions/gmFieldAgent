@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/padding_medium"
+    >
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <!-- Group for Content Views -->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvHeading, tvEndVisitDate, tvEndVisitTime, view1, tvVisitSummery, tvVisitSummeryValue, view2, tvExplainStatusTitle, tvExplainStatus, view3, tvVisitDetailsTitle, tvVisitDetails, view4, tvAnotherVisitValue, view5, tvEngineerDetailsTitle, tvname, tvEngineerContact, tvEngineerEmail, view6, btnViewObservation, btnViewCheckList, btnBack,tvCommissionStatusTitle,tvCommissionStatusValue,view10" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:src="@drawable/drag_handle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHeading"
+        style="@style/M3_body_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/padding_small"
+        android:text="Visit Input Details"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+
+
+
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEndVisitDate"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeading"
+        tools:text="End Visit Date" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEndVisitTime"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndVisitDate"
+        tools:text="End Visit Date" />
+
+    <View
+        android:id="@id/view1"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEndVisitTime" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCommissionStatusTitle"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Commission Status"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndVisitTime" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCommissionStatusValue"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCommissionStatusTitle"
+        tools:text="Commission Status Value" />
+
+
+
+    <View
+        android:id="@id/view10"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCommissionStatusValue" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitSummery"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/visit_summery"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitSummeryValue"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitSummery"
+        tools:text="this is just of" />
+
+
+    <View
+        android:id="@id/view2"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVisitSummeryValue" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvExplainStatusTitle"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Explain Status"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitSummeryValue" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvExplainStatus"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExplainStatusTitle"
+        tools:text="this is just of" />
+
+
+    <View
+        android:id="@id/view3"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExplainStatus" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitDetailsTitle"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Visit Details"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvVisitDetails"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitDetailsTitle"
+        tools:text="This is the visit details content." />
+
+    <!-- Divider View -->
+    <View
+        android:id="@+id/view4"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitDetails" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAnotherVisitValue"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        tools:text="this is just of" />
+
+
+    <!-- Divider View -->
+    <View
+        android:id="@+id/view5"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnotherVisitValue" />
+
+    <!-- Engineer Details Title -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEngineerDetailsTitle"
+        style="@style/M3_label_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        android:text="Engineer Details" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvname"
+        style="@style/M3_label_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:background="@drawable/trans_bg"
+        android:drawableStart="@drawable/ic_user_img"
+        android:drawablePadding="@dimen/padding_small"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEngineerDetailsTitle"
+        tools:text="Ankush " />
+
+
+    <!-- Engineer Details Content -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEngineerContact"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvname"
+        tools:text="This is the engineer details content." />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEngineerEmail"
+        style="@style/M3_body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEngineerContact"
+        tools:text="This is the engineer details content." />
+
+
+    <View
+        android:id="@+id/view6"
+        style="@style/M3_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEngineerEmail" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewObservation"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Observation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewCheckList" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewCheckList"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View CheckList"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_primary"
+        android:text="Go Back To Case"
+        android:textColor="@color/md_theme_onPrimary"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewObservation"
+        app:visibilityMode="ignore" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

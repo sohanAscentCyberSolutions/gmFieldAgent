@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customers_nav"
+    app:startDestination="@id/customerFragment">
+
+
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.example.md3.view.customer.view.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" />
+    <fragment
+        android:id="@+id/customerDetailsFragment"
+        android:name="com.example.md3.view.customer.view.CustomerDetailsFragment"
+        android:label="CustomerDetailsFragment" >
+        <argument
+            android:name="customer_id"
+            app:argType="string" />
+    </fragment><action android:id="@+id/action_global_customerDetailsFragment" app:destination="@id/customerDetailsFragment"/>
+</navigation>

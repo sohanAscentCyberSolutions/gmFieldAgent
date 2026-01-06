@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/corner_radius_large"
+    android:backgroundTint="#FFFFFF"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/ic_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            style="@style/M3_heading_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0"
+            android:padding="@dimen/padding_small"
+            android:text="Submit Visit Input?"
+            android:textSize="24sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textAlignment="center"
+            android:textFontWeight="400"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView2"
+            style="@style/M3_title_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_medium"
+            android:fontFamily="@font/roboto_medium"
+            android:textFontWeight="500"
+            tools:targetApi="p"
+            android:text="You won't be able to:"
+            android:textColor="@color/md_theme_secondary"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubHeading"
+            style="@style/M3_body_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/info"
+            android:drawablePadding="@dimen/padding_small"
+            android:layout_marginTop="4dp"
+            android:paddingStart="@dimen/padding_medium"
+            android:fontFamily="@font/roboto_medium"
+            android:textFontWeight="400"
+            tools:targetApi="p"
+            android:letterSpacing="0"
+            android:text="Add Observations once submitted"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_secondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubHeading2"
+            style="@style/M3_body_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/info"
+            android:paddingStart="@dimen/padding_medium"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/roboto_medium"
+            android:textFontWeight="400"
+            android:letterSpacing="0"
+            tools:targetApi="p"
+            android:text="Submit Checksheet once submitted"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_secondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubHeading" />
+
+
+        <View
+            android:id="@+id/dummyView3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/md_theme_outlineVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubHeading2" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_theme_primary"
+            android:text="@string/confirm"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dummyView3" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCancel"
+            style="@style/M3_title_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@null"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:text="Cancel"
+            android:textFontWeight="400"
+            android:letterSpacing="0"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/md_theme_primary"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPositive"
+            app:layout_constraintEnd_toStartOf="@+id/btnPositive"
+            app:layout_constraintTop_toTopOf="@+id/btnPositive" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

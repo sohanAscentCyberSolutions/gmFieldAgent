@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.breakdown.view.ExtendedAndAMCDetailsFragment">
+
+
+    <include
+        android:id="@+id/toolbarlayout"
+        layout="@layout/toolbar_with_cross"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbarlayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnDone"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvIssueTitle"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="Information"
+                        android:textColor="@color/md_theme_light_onSurface"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAmcStatus"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="AMC Status"
+                        app:layout_constraintEnd_toStartOf="@+id/tvAmcStatusValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvIssueTitle" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAmcStatusValue"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAmcStatus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvAmcStatus" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvWarrantyEndDate"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="Applicable"
+                        app:layout_constraintEnd_toStartOf="@+id/tvWarrantyEndDateValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAmcStatus" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvWarrantyEndDateValue"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvWarrantyEndDate"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvWarrantyEndDate" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAMCPrice"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="AMC Price"
+                        app:layout_constraintEnd_toStartOf="@+id/tvAMCPriceValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvWarrantyEndDate" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAMCPriceValue"
+                        style="@style/M3_label_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="1999000"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAMCPrice"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvAMCPrice" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAvaiable"
+                style="@style/M3_label_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:text="Available Contracts"
+                android:drawableStart="@drawable/file"
+                android:textColor="@color/md_theme_light_onSurface"
+                android:drawablePadding="@dimen/padding_small"
+                android:textSize="@dimen/text_size_sami_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialCardView2" />
+
+
+            <include
+                android:id="@+id/contractName"
+                layout="@layout/available_contract"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAvaiable" />
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contractRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/contract_layout"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintTop_toBottomOf="@id/tvAvaiable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+
+
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/noOfPartReplacementAllowed"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_medium"-->
+<!--                android:layout_marginTop="@dimen/margin_medium"-->
+<!--                android:checkable="true"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/contractRecyclerview"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                >-->
+
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingHorizontal="@dimen/padding_small"-->
+<!--                    android:paddingBottom="@dimen/padding_small">-->
+
+
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/title"-->
+<!--                        style="@style/M3_label_medium"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_marginHorizontal="@dimen/margin_small"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/margin_medium"-->
+<!--                        android:textColor="@color/md_theme_light_onSurface"-->
+<!--                        android:textSize="@dimen/margin_medium"-->
+<!--                        android:text="No. of  part Replacements Allowed"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        />-->
+
+
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginHorizontal="@dimen/margin_small"-->
+<!--                        tools:listitem="@layout/noofparts_item_layout"-->
+<!--                        android:layout_marginTop="@dimen/margin_small"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/title"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        />-->
+
+
+
+
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Generate Quote"
+        app:icon="@drawable/vector__8_"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:visibilityMode="ignore" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarlayout"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
